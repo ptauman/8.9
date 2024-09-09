@@ -127,25 +127,35 @@ function space(str)
     {return str.trim()}
 }
 
-function multyList(list1,list2)
-{//יצירת רשימה 1 חדשה
-    for (let index = 0; index < list1; index++) {
-        let new1 = []
-        for(let index2 = 0; index2 < list1; index2++)
-        {
-            if (index!=index)
-            {new1.push(list1[index2])}
-        }
+function multyList(list)
+{
+    res = 1
+    for (let index = 0; index < list.length; index++) {
+        res*=list[index]       
     }
-    console.log(new1)
+    return res
+}
 
-        // list3 =[]
-        // let number =0
-        // for (let index = 0; index < new1.length; index++) {
-        //   numnber *= new1[index]           
-        // }   
-        // number*=sum(list2)
-
+function multyLists(list1,list2)
+{//יצירת רשימה 1 חדשה
+    let result = 0
+    list3 = []
+    //שינוי רישמה 1 עבור כל איבר
+    for (let index = 0; index < list1.length; index++) {
+        let new1 = []
+        //הכנסת כל האיברים מלבדבהאביר הנכוחי לרישמה החדשה
+        for(let index2 = 0; index2 < list1.length; index2++)
+        {
+            if (index!=index2)
+            {new1.push(list1[index2])}   
+        }
+        //קריאה לפונקצייות שמחשבות את מכפלת אבירי המערך הראשון ואת סך איברי המערך השני
+        result = multyList(new1)*sum(list2)
+        //הוספת התוצאה למערך השלישי
+        list3.push(result)
+        console.log(list3)
+    }
+    
     
 }
-multyList([1,2,3,4][1,2,3,4])
+multyLists([2,2,2,2],[2,2,2,2])
