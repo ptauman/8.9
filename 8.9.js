@@ -155,8 +155,8 @@ function multyLists(list1,list2)
         list3.push(result)
         
     }
-    console.log(list3)
+    return list3
     
     
 }
-multyLists([2,2,1,2],[2,2,2,2])
+console.log(multyLists([2,2,4,2],[100,2,2,2]))
