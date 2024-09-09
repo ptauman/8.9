@@ -153,9 +153,10 @@ function multyLists(list1,list2)
         result = multyList(new1)*sum(list2)
         //הוספת התוצאה למערך השלישי
         list3.push(result)
-        console.log(list3)
+        
     }
+    console.log(list3)
     
     
 }
-multyLists([2,2,2,2],[2,2,2,2])
+multyLists([2,2,1,2],[2,2,2,2])
